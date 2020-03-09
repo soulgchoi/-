@@ -1,4 +1,4 @@
-# 1일차_DB 프로젝트
+# DB 프로젝트
 
 Created: Mar 09, 2020 9:27 PM
 
@@ -7,7 +7,7 @@ Created: Mar 09, 2020 9:27 PM
 ## 산출물 내역
 
 1. 주어진 테이블을 분할한 ERD_DIAGRAM
-2. 심화과제 - 데이터 출력
+2. 데이터 출력
 
 ## ERD_DIAGRAM
 
@@ -69,7 +69,7 @@ Created: Mar 09, 2020 9:27 PM
 
 
 
-## 심화과제
+## 데이터 출력 예시
 
 ### 각 일자별 빠진 교육생 자료 출력
 
@@ -78,9 +78,9 @@ Created: Mar 09, 2020 9:27 PM
 ​	아래는 2020-01-01 을 기준으로 한 예시이다.
 
 ```sql
-SELECT student_id, `name` FROM ssafy.student
+SELECT student_id, `name` FROM db.student
 WHERE student_id NOT IN (
-	SELECT DISTINCT student_id FROM ssafy.attendance WHERE DATE='2020-01-01'
+	SELECT DISTINCT student_id FROM db.attendance WHERE DATE='2020-01-01'
 );
 ```
 
@@ -91,7 +91,7 @@ WHERE student_id NOT IN (
 ### 각 기수별, 지역별, 팀별 상위 알고리즘(A+이상) 인원 수
 
 ```sql
-SELECT COUNT(student_id) FROM ssafy.`algorithm` 
+SELECT COUNT(student_id) FROM db.`algorithm` 
 WHERE (grade='A+' OR grade='B')
 AND student_id IN (
 	기수, 지역, 팀 등 다른 조건을 여기에 건다.
@@ -101,10 +101,10 @@ AND student_id IN (
 - 기수별 (예시는 2기)
 
     ```sql
-    SELECT COUNT(student_id) FROM ssafy.`algorithm` 
+    SELECT COUNT(student_id) FROM db.`algorithm` 
     WHERE (grade='A+' OR grade='B')
     AND student_id IN (
-    	SELECT DISTINCT student_id FROM ssafy.student WHERE curriculum_id='2'
+    	SELECT DISTINCT student_id FROM db.student WHERE curriculum_id='2'
     )
     ```
 
@@ -115,10 +115,10 @@ AND student_id IN (
 - 지역별 (예시는 서울)
 
     ```sql
-    SELECT COUNT(student_id) FROM ssafy.`algorithm` 
+    SELECT COUNT(student_id) FROM db.`algorithm` 
     WHERE (grade='A+' OR grade='B')
     AND student_id IN (
-    	SELECT DISTINCT student_id FROM ssafy.student WHERE region_id='1'
+    	SELECT DISTINCT student_id FROM db.student WHERE region_id='1'
     )
     ```
 
@@ -129,10 +129,10 @@ AND student_id IN (
 - 팀별 (예시는 프로젝트 1의 1팀이다.)
 
     ```sql
-    SELECT COUNT(student_id) FROM ssafy.`algorithm` 
+    SELECT COUNT(student_id) FROM db.`algorithm` 
     WHERE (grade='A+' OR grade='B')
     AND student_id IN (
-    	SELECT DISTINCT student_id FROM ssafy.student_team WHERE team_id='1'
+    	SELECT DISTINCT student_id FROM db.student_team WHERE team_id='1'
 )
     ```
 
@@ -140,14 +140,3 @@ AND student_id IN (
     
     ![1%20_DB/day1_7.jpg](1%20_DB/day1_7.jpg)
 
----
-
-## 마치며
-
-1학기 관통 프로젝트 이후로 DB 설계에 손을 댄 적이 없었기 때문에 접근이 힘들었다.
-
-ERD cloud 가 어려워서 MySQL 의 워크벤치를 활용하면 좋지 않았을까 아쉬움이 있었다. 대신 여러 툴을 경험해 볼 수 있다는 점에서 좋았다.
-
-설계한 데이터 스키마가 효율성이 떨어질 것 같다는 느낌을 받았다. 경험하지 못한 부분이라 잘 가늠되지 않았다. 
-
-쿼리 작성에 도움을 준 우리 팀장님에게 압도적 감사🥰
