@@ -149,3 +149,39 @@ Max Pooling 은 가장 큰 값을 가져오는(==샘플링하는) 방법이다.
 
 
 
+### CNN 모델 학습
+
+#### Inception(GoogLeNet)
+
+딥러닝 학습에서 망이 깊고 레이어가 높을 수록 성능은 좋아지지만, 연산량이 많고 과적합 등의 문제로 학습이 힘들어진다.
+
+- CNN 의 연산량
+
+  Weight, Bias 말고도 노드 개수, 레이어 깊이 등의 하이퍼파라미터
+
+  연산을 거칠 때마다 채널이 커지고, 필터의 크기도 하이퍼파라미터가 되어 필터 크기에 따라 연산량이 많아진다.
+
+  stride 와 padding 값 역시 하이퍼파라미터이므로 레이어가 많아지면 연산이 많아진다.
+
+  풀링 과정에서도 필터와 stride 등등.. Hyper Param 값들이 많다.
+
+이를 해결하기 위한 방안 중 하나가 Sparse Connectivity 이다. 컨볼루션 연산은 굉장히 Dense하게... 빽빽하게 연결되어 있는데 이를 높은 관련성을 가진 노드끼리만 연결하도록 바꾸는 것이다.
+
+실제로는 Dense matrix 연산보다 Sparse Matrix 연산이 더 큰 리소스를 필요로 한다. Dense matrix 연산은 기술이 많이 발전하면서 더 효율적이 되었다.
+
+Inception 은 Feature Map 을 추출하는 과정에서 Sparse 한 방식으로 노드 간의 연결은 줄이면서 행렬 연산은 Dense 하게 하도록 처리한 것이다.
+
+Inception Module 의 연산
+
+1. 1x1 convolution
+2. 1x1 convolution + 3x3 convolution
+3. 1x1 convolution + 5x5 convolution
+4. 3x3 MaxPooling + 1x1 convolution
+
+이 네 가지의 연산 결과를 Channel-wise 한다.
+
+1x1 convolution 은 채널 수를 조절하고 줄이는 역할을 한다. 채널을 줄여서 파라미터 개수도 절약할 수 있다.
+
+https://datascienceschool.net/view-notebook/8d34d65bcced42ef84996b5d56321ba9/
+
+https://ikkison.tistory.com/86
