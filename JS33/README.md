@@ -23,13 +23,14 @@
 21. ~~**[클로저(Closures)](https://github.com/yjs03057/33-js-concepts#21-클로저closures)**~~
 22. ~~**[고차함수](https://github.com/yjs03057/33-js-concepts#22-고차함수)**~~
 23. ~~**[재귀](https://github.com/yjs03057/33-js-concepts#23-재귀)**~~
-24. **[컬렉션과 생성기](https://github.com/yjs03057/33-js-concepts#24-컬렉션과-생성기)**
-25. **[Promises](https://github.com/yjs03057/33-js-concepts#25-promises)**
-26. **[async/await](https://github.com/yjs03057/33-js-concepts#26-asyncawait)**
-27. **[자료 구조](https://github.com/yjs03057/33-js-concepts#27-자료-구조)**
-28. **[함수 성능과 빅 오(Big-O) 표기법](https://github.com/yjs03057/33-js-concepts#28-함수-성능과-빅-오big-o-표기법)**
-29. **[알고리즘](https://github.com/yjs03057/33-js-concepts#29-알고리즘)**
-30. **[상속, 다형성, 코드의 재사용성](https://github.com/yjs03057/33-js-concepts#30-상속-다형성-코드의-재사용성)**
-31. **[설계 패턴](https://github.com/yjs03057/33-js-concepts#31-설계-패턴)**
-32. **[부분 어플리케이션, 커링(Currying), Compose, Pipe](https://github.com/yjs03057/33-js-concepts#32-부분-어플리케이션-커링currying-compose-pipe)**
-33. **[클린 코드](https://github.com/yjs03057/33-js-concepts#33-클린-코드)**
+24. ~~**[컬렉션과 생성기](https://github.com/yjs03057/33-js-concepts#24-컬렉션과-생성기)**~~
+25. ~~**[Promises](https://github.com/yjs03057/33-js-concepts#25-promises)**~~
+26. ~~**[async/await](https://github.com/yjs03057/33-js-concepts#26-asyncawait)**~~
+27. ~~**[자료 구조](https://github.com/yjs03057/33-js-concepts#27-자료-구조)**~~
+28. ~~**[함수 성능과 빅 오(Big-O) 표기법](https://github.com/yjs03057/33-js-concepts#28-함수-성능과-빅-오big-o-표기법)**~~
+29. ~~**[알고리즘](https://github.com/yjs03057/33-js-concepts#29-알고리즘)**~~
+30. ~~**[상속, 다형성, 코드의 재사용성](https://github.com/yjs03057/33-js-concepts#30-상속-다형성-코드의-재사용성)**~~
+31. ~~**[설계 패턴](https://github.com/yjs03057/33-js-concepts#31-설계-패턴)**~~
+32. ~~**[부분 어플리케이션, 커링(Currying), Compose, Pipe](https://github.com/yjs03057/33-js-concepts#32-부분-어플리케이션-커링currying-compose-pipe)**~~
+33. ~~**[클린 코드](https://github.com/yjs03057/33-js-concepts#33-클린-코드)**~~
+34. Generator, Iterator
