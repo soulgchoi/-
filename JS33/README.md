@@ -1,4 +1,4 @@
-# 모든 자바스크립트 개발자가 알아야 하는 33가지 개념
+# (끝!)모든 자바스크립트 개발자가 알아야 하는 33가지 개념
 
 1. ~~**[호출 스택](https://github.com/yjs03057/33-js-concepts#1-호출-스택)**~~
 2. ~~**[원시 자료형](https://github.com/yjs03057/33-js-concepts#2-원시-자료형)**~~
@@ -33,4 +33,4 @@
 31. ~~**[설계 패턴](https://github.com/yjs03057/33-js-concepts#31-설계-패턴)**~~
 32. ~~**[부분 어플리케이션, 커링(Currying), Compose, Pipe](https://github.com/yjs03057/33-js-concepts#32-부분-어플리케이션-커링currying-compose-pipe)**~~
 33. ~~**[클린 코드](https://github.com/yjs03057/33-js-concepts#33-클린-코드)**~~
-34. Generator, Iterator
+34. ~~Generator, Iterator~~
